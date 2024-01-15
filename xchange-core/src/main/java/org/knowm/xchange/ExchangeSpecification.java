@@ -38,6 +38,7 @@ public class ExchangeSpecification {
   /** arbitrary exchange params that can be set for unique cases */
   private Map<String, Object> exchangeSpecificParameters = new HashMap<>();
 
+
   /**
    * Dynamic binding
    *
@@ -542,5 +543,31 @@ public class ExchangeSpecification {
     public void setRateLimiterEnabled(boolean rateLimiterEnabled) {
       this.rateLimiterEnabled = rateLimiterEnabled;
     }
+  }
+
+  @Override
+  public String toString() {
+    return "\n ExchangeSpecification{" +
+            "\n exchangeClass=" + exchangeClass +
+            "\n, exchangeName='" + exchangeName + '\'' +
+            "\n, exchangeDescription='" + exchangeDescription + '\'' +
+            "\n, userName='" + userName + '\'' +
+            "\n, password='" + password + '\'' +
+            "\n, secretKey='" + secretKey + '\'' +
+            "\n, apiKey='" + apiKey + '\'' +
+            "\n, sslUri='" + sslUri + '\'' +
+            "\n, plainTextUri='" + plainTextUri + '\'' +
+            "\n, overrideWebsocketApiUri='" + overrideWebsocketApiUri + '\'' +
+            "\n, host='" + host + '\'' +
+            "\n, port=" + port +
+            "\n, proxyHost='" + proxyHost + '\'' +
+            "\n, proxyPort=" + proxyPort +
+            "\n, httpConnTimeout=" + httpConnTimeout +
+            "\n, httpReadTimeout=" + httpReadTimeout +
+            "\n, resilience=" + resilience +
+            "\n, metaDataJsonFileOverride='" + metaDataJsonFileOverride + '\'' +
+            "\n, shouldLoadRemoteMetaData=" + shouldLoadRemoteMetaData +
+            "\n, exchangeSpecificParameters=" + exchangeSpecificParameters +
+            "\n }";
   }
 }
